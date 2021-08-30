@@ -1,0 +1,24 @@
+package com.ji.quiz.pretty_print_apple;
+
+public class Apple {
+
+	Integer weight;
+	String color;
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public Integer getWeight() {
+		return weight;
+	}
+
+	public void setWeight(Integer weight) {
+		this.weight = weight;
+	}
+
+}
