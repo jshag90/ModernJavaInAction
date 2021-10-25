@@ -1,0 +1,48 @@
+package com.ji.quiz;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Quiz2_1 {
+
+	public static void main(String[] args) {
+		List<Apple> inven = new ArrayList<>();
+		Apple a1 = new Apple();
+		a1.setColor("red");
+		a1.setWeight(170);
+		
+		Apple a2 = new Apple();
+		a2.setColor("blue");
+		a2.setWeight(100);
+		inven.add(a1);
+		inven.add(a2);
+		
+	}
+	
+	public static void prettyPrintApple(List<Apple> inventory, AppleFormatter formatter) {
+		for(Apple apple: inventory) {
+			String output = formatter.accept(apple);
+			System.out.println(output);
+		}
+	}
+
+	public class AppleFancyFormatter implements AppleFormatter {
+
+		@Override
+		public String accept(Apple apple) {
+			String characteristic = apple.getWeight() > 150 ? "heavy" : "light";
+			return "A " + characteristic + " " + apple.getColor() + " apple";
+		}
+
+	}
+
+	public class AppleSimpleFormatter implements AppleFormatter {
+
+		@Override
+		public String accept(Apple apple) {
+			return "An apple of " + apple.getWeight() + "g";
+		}
+
+	}
+
+}

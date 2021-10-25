@@ -1,0 +1,5 @@
+package com.ji.quiz;
+
+public interface AppleFormatter {
+
+}

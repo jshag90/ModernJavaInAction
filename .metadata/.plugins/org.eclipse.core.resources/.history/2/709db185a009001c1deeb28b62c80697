@@ -1,0 +1,9 @@
+package com.ji.quiz;
+
+public class Quiz2_1 {
+
+}
+
+public interface ApplieFormatter{
+	String accept(Apple a);
+}
