@@ -11,12 +11,12 @@ public class MakeStreamByFile {
 
 	public static void main(String[] args) {
 		long uniqueWords = 0; 
-		//½ºÆ®¸² ÀÚ¿øÀ» ÀÚµ¿À» ÇØÁ¦ÇÒ ¼ö ÀÖ´Â AutoCloseableÀÌ¹Ç·Î try-finally°¡ ÇÊ¿ä ¾øÀ½.
+		//ìŠ¤íŠ¸ë¦¼ì€ ìì›ì„ ìë„ì‘ë¡œ í•´ì œí•  ìˆ˜ ìˆëŠ” AutoCloseableì´ë¯€ë¡œ try-finallyê°€ í•„ìš”ì—†ë‹¤.
 		try(Stream<String> lines = Files.lines(Paths.get("data.txt"), Charset.defaultCharset())) {
 			
-			uniqueWords = lines.flatMap(line -> Arrays.stream(line.split(" "))) // °íÀ¯ ´Ü¾î ¼ö °è»ê
-										 .distinct() //Áßº¹ Á¦°Å
-										 .count(); //´Ü¾î ½ºÆ®¸² »ı¼º
+			uniqueWords = lines.flatMap(line -> Arrays.stream(line.split(" ")))//ê³ ìœ  ë‹¨ì–´ ìˆ˜ ê³„ì‚°
+										 .distinct() //ì¤‘ë³µì œê±°
+										 .count(); //ë‹¨ì–´ ìŠ¤íŠ¸ë¦¼ ìƒì„±
 			
 		}catch(IOException e) {
 			
