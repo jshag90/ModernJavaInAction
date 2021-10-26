@@ -1,10 +1,10 @@
-package com.ji.quiz.pretty_print_apple;
+package com.ji.quiz;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ÄûÁî 2-1 À¯¿¬ÇÑ prettyPrintApple ¸Þ¼­µå ±¸ÇöÇÏ±â
+ * ï¿½ï¿½ï¿½ï¿½ 2-1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ prettyPrintApple ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½
  * @author ji
  *
  */

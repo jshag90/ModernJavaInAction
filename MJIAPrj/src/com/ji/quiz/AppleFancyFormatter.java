@@ -1,4 +1,4 @@
-package com.ji.quiz.pretty_print_apple;
+package com.ji.quiz;
 
 public class AppleFancyFormatter  implements AppleFormatter {
 
