@@ -1,4 +1,4 @@
-package com.ji.example;
+package com.ji.chapter5;
 
 import java.util.stream.Stream;
 
