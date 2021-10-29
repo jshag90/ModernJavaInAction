@@ -2,14 +2,36 @@ package com.ji.chapter6;
 
 public class Dish {
 	
-	String name;
+	  private final String name;
+	  private final boolean vegetarian;
+	  private final int calories;
+	  private final Type type;
 
-	public String getName() {
-		return name;
-	}
+	  public Dish(String name, boolean vegetarian, int calories, Type type) {
+	    this.name = name;
+	    this.vegetarian = vegetarian;
+	    this.calories = calories;
+	    this.type = type;
+	  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+	  public String getName() {
+	    return name;
+	  }
 
+	  public boolean isVegetarian() {
+	    return vegetarian;
+	  }
+
+	  public int getCalories() {
+	    return calories;
+	  }
+
+	  public Type getType() {
+	    return type;
+	  }
+
+	  @Override
+	  public String toString() {
+	    return name;
+	  }
 }
