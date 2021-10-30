@@ -1,6 +1,6 @@
 package com.ji.chapter6;
 
-public class menu {
+public class Menu {
 	
 	String name;
 

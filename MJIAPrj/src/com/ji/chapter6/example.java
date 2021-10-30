@@ -7,7 +7,7 @@ public class example {
 
 	public static void main(String[] args) {
 		
-		List<menu> menu = new ArrayList<menu>();
+		List<Menu> menu = new ArrayList<Menu>();
 //		String shortMenu = tTYmenu.stream().map(Dish::getName).collect(joining(","));
 		
 		//6-3 각 서브그룹에서 가장 칼로리가 높은 요리 찾기
@@ -19,6 +19,7 @@ public class example {
 										maxBy(comparingInt(Dish::getCalories)), //감싸인 컬렉터 
 								Optional::get))); //변환 함수
 **/			
+		
 				
 	
 	}
