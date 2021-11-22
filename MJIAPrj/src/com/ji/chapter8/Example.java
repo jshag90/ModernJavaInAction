@@ -17,15 +17,15 @@ public class Example {
 		ageOfFriends.forEach((friend, age) -> System.out.println(friend + " is "+ age + " years old"));
 		
 		//8.3.2 정렬 메서드
-		Map<String, String> favouriteMovies = Map.ofEntries(entry("Raphael", "Star Wars"),
-//				entry("Cristina", "Matrix"), 
+		Map<String, String> favouriteMovies = Map.ofEntries(
+				entry("Raphael", "Star Wars"),
+		//		entry("Cristina", "Matrix"), 
 				entry("Olivia", "James Bond"));
 		favouriteMovies.entrySet().stream().sorted(Entry.comparingByKey()).forEach(System.out::println);
 		
 		//8.3.3 getOrDefault 메서드
 		System.out.println(favouriteMovies.getOrDefault("Olivia", "Matrix"));
 		System.out.println(favouriteMovies.getOrDefault("Thibaut", "Matrix"));
-		
 		
 	}
 
