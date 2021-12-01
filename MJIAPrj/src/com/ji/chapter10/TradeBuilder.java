@@ -7,6 +7,11 @@ public class TradeBuilder {
 	public TradeBuilder() {
 		this.builder = null;
 	}
+	
+	public TradeBuilder quantity(int quantity) {
+		trade.setQuantity(quantity);
+		return this;
+	}
 
 	public TradeBuilder(MethodChainingOrderBuilder builder, Trade.Type type, int quantity) {
 		this.builder = builder;
