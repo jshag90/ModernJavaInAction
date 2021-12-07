@@ -1,5 +1,7 @@
 package com.ji.chapter11;
 
+import java.util.Optional;
+
 public class Example {
 
 	
@@ -17,5 +19,13 @@ public class Example {
 //		
 //		return "Unknown";
 //	}
+	
+	//11-5 Optional로 자동차의 보험회사 이름 찾기
+	public String getCarInsuranceName(Optional<Person> person) {
+		return person.flatMap(Person::getCar)
+						 	 .flatMap(Car::getInsurance)
+						 	 .map(Insurance::getName)
+						 	 .orElse("Unknown"); // Optional이 비어있으면 기본값 사용
+	}
 	
 }
