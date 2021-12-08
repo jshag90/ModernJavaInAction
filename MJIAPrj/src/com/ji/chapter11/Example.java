@@ -1,6 +1,10 @@
 package com.ji.chapter11;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Example {
 
@@ -26,6 +30,15 @@ public class Example {
 						 	 .flatMap(Car::getInsurance)
 						 	 .map(Insurance::getName)
 						 	 .orElse("Unknown"); // Optional이 비어있으면 기본값 사용
+	}
+	
+	//11-6 사람 목록을 이용해 가입한 보험 회사 이름 찾기
+	public Set<String> getCarInsuranceNames(List<Person> persons){
+		return persons.stream().map(Person::getCar)
+							  .map(optCar -> optCar.flatMap(Car::getInsurance))
+							  .map(optIns -> optIns.map(Insurance::getName))
+							  .flatMap(Optional::stream)
+							  .collect(Collectors.toSet());
 	}
 	
 }
